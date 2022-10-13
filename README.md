@@ -10,6 +10,6 @@ On this website you will be able to search you zodiac sign to find your daily ho
 
 This is a wireframe of the first screen where you will be able to enter your zodiac sign, or your date of birth to pull up your dairly horoscope. 
 
-![Image](https://tinypic.host/i/screen-shot-2022-10-13-at-63849-pm.QpZ5b)
+![Image](https://tinypic.host/i/QpZ5b)
 
 This is a wireframe of how your horoscope will be displayed, along with the name and an image of your zodiac sign.
