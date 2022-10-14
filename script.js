@@ -1,4 +1,3 @@
-let sign = document.querySelector(`#sign`)
 let button = document.querySelector(`#searchButton`)
 
 
@@ -13,46 +12,30 @@ async function getData (event) {
 event.preventDefault()
 
 
-  const URL = `http://ohmanda.com/api/horoscope/leo`;
-  fetch(URL)
+
+  fetch(`http://ohmanda.com/api/horoscope/${textInput}`)
   .then(res => res.json())
   .then(res => {
       console.log(res)
+
+      let sign = document.querySelector(`#sign`)
+      sign.innerHTML = `${res.sign}`
       
-      
+      let date = document.querySelector(`#date`)
+      date.innerText = `${res.date}`
+
+      let description = document.querySelector(`#description`)
+      description.innerText = `${res.horoscope}`
       
   })
+  .catch( err =>{
+    console.log(`Error!`, err)
+  }
+)
 }
 
 
 
 
 
-
-  // fetch(`https://aztro.sameerkumar.website/?sign=${textInput}&day=today`)
-  // .then(res => {
-  //   return res.json()
-  //   console.log(`success`)
-  // })
-  // .then( res => {
-  //   console.log(res.sprites)
-  //   console.log(`height ` + res.height)
-  //   let pokemonName = document.querySelector(`#pokemonName`)
-  //   pokemonName.innerText = res.name.toUpperCase()
-  //   document.querySelector(`#image`).src=
-  // }
-//)
-//   .catch( err =>{
-//     console.log(`Error!`, err)
-//   }
-// )
-// }
-
-//1 attach event to button
 button.addEventListener(`click`, getData)
-
-//2 read the input bar variable/value
-
-// 3 find html element we want to populate
-
-//4 populate element and render data on screen
