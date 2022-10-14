@@ -9,6 +9,7 @@ Project 1 API call
 
 On this website you will be able to search you zodiac sign to find your daily horoscope. This will use an API call to (http://ohmanda.com/api/horoscope/) to display an image of your zodiac sign, the name of your zodiac sign, the date, and your daily horoscope. If you are unsure of your your zodiac sign you will also be able to enter your date of birth to find out and display the appropriate sign. 
 
+
 # H1 Wireframes
 
 ![Image](https://tinypic.host/images/2022/10/14/Screen-Shot-2022-10-13-at-6.44.24-PM.png)
