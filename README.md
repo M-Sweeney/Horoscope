@@ -21,7 +21,7 @@ This is a wireframe of how your horoscope will be displayed, along with the name
 
 # H1 Stretch goals
 
-⋅⋅* animate images
-⋅⋅* animate background
-⋅⋅* dark mode 
-⋅⋅* OOP
+- Animate images
+- Animate background
+- Dark mode 
+- OOP
