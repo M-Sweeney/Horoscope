@@ -1,26 +1,26 @@
-console.log(`working`)
-
+let sign = document.querySelector(`#sign`)
 let button = document.querySelector(`#searchButton`)
+
+
+
 
 //req and res
 //request and response
 
 async function getData (event) {
-  let textInput = document.querySelector(`#inputBar`).value.toLowerCase()
+  let textInput = document.querySelector(`#inputBar`).value
 
 event.preventDefault()
 
 
-
-
-  const URL = `https://aztro.sameerkumar.website/?sign=${textInput}&day=today`;
-  fetch(URL, {
-      method: 'POST'
-  })
+  const URL = `http://ohmanda.com/api/horoscope/leo`;
+  fetch(URL)
   .then(res => res.json())
-  .then(json => {
-      const test = json.description;
-      console.log(test);
+  .then(res => {
+      console.log(res)
+      
+      
+      
   })
 }
 
