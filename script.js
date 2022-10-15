@@ -26,9 +26,31 @@ event.preventDefault()
       let back = document.querySelector(`#back`)
       back.style.opacity = 100
     
-    if (textInput = `aries`) {
+    if (textInput = `aquarius`) {
       image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
-    }
+    }else if (textInput = `pisces`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `aries`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `taurus`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `gemini`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `cancer`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `leo`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `virgo`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `libra`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `scorpio`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if (textInput = `sagittarius`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else if(textInput = `capricorn`) {
+      image.src= `https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg`
+    }else{image.src =``}
   })
   .catch( err =>{
     console.log(`Error!`, err)
