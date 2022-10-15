@@ -1,3 +1,15 @@
 body {
-  background-color: cadetblue;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
+
+#signImg {
+  max-height: 300px;
+  max-width: 300px;
+}
+

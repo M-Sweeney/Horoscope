@@ -11,8 +11,6 @@ async function getData (event) {
 
 event.preventDefault()
 
-
-
   fetch(`http://ohmanda.com/api/horoscope/${textInput}`)
   .then(res => res.json())
   .then(res => {
@@ -34,8 +32,5 @@ event.preventDefault()
 )
 }
 
-
-
-
-
 button.addEventListener(`click`, getData)
+
