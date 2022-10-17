@@ -23,34 +23,32 @@ event.preventDefault()
       let description = document.querySelector(`#description`)
       description.innerText = `${res.horoscope}`
       
-      // let back = document.querySelector(`#back`)
-      // back.style.opacity = 100
     
-    if (textInput = `aquarius`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.57.43-AM.png`
-    }else if (textInput = `pisces`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.57.31-AM.png`
-    }else if (textInput = `aries`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.55.45-AM.png`
-    }else if (textInput = `taurus`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.55.59-AM.png`
-    }else if (textInput = `gemini`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.56.13-AM.png`
-    }else if (textInput = `cancer`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.56.43-AM.png`
-    }else if (textInput = `leo`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.56.33-AM.png`
-    }else if (textInput = `virgo`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.56.23-AM.png`
-    }else if (textInput = `libra`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.56.52-AM.png`
-    }else if (textInput = `scorpio`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.57.02-AM.png`
-    }else if (textInput = `sagittarius`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.57.18-AM.png`
-    }else if(textInput = `capricorn`) {
-      image.src= `https://tinypic.host/images/2022/10/16/Screen-Shot-2022-10-16-at-11.57.52-AM.png`
-    }else{image.src =``}
+    if (textInput.toLowerCase() == `aquarius`) {
+      image.src= `assets/aquarius.png`
+    }else if (textInput.toLowerCase() == `pisces`) {
+      image.src= `assets/pisces.png`
+    }else if (textInput.toLowerCase() == `aries`) {
+      image.src= `assets/aries.png`
+    }else if (textInput.toLowerCase() == `taurus`) {
+      image.src= `assets/taurus.png`
+    }else if (textInput.toLowerCase() == `gemini`) {
+      image.src= `assets/gemini.png`
+    }else if (textInput.toLowerCase() == `cancer`) {
+      image.src= `assets/cancer.png`
+    }else if (textInput.toLowerCase() == `leo`) {
+      image.src= `assets/leo.png`
+    }else if (textInput.toLowerCase() == `virgo`) {
+      image.src= `assets/virgo.png`
+    }else if (textInput.toLowerCase() == `libra`) {
+      image.src= `assets/libra.png`
+    }else if (textInput.toLowerCase() == `scorpio`) {
+      image.src= `assets/scorpio.png`
+    }else if (textInput.toLowerCase() == `sagittarius`) {
+      image.src= `assets/sag.png`
+    }else if(textInput.toLowerCase() == `capricorn`) {
+      image.src= `assets/cap.png`
+    }else{image.src ==``}
   })
   .catch( err =>{
     console.log(`Error!`, err)
