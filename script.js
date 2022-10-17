@@ -6,6 +6,11 @@ let description = document.querySelector(`#description`)
 
 async function getData (event) {
   let textInput = document.querySelector(`#inputBar`).value.toLowerCase()
+  let dropDownInput = document.querySelector(`#unsure`).value
+
+  if (dropDownInput == `aquarius` || `pisces` || `aries` || `taurus` || `gemini` || `cancer` || `leo` || `virgo` || `libra` || `scorpio` || `sagittarius` || `capricorn`) {
+    let textInput = dropDownInput.value
+  }
 
 event.preventDefault()
 
