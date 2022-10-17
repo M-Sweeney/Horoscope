@@ -29,4 +29,24 @@ body{
   transform: scale(1.25);
 }
 
+#searchButton{
+  cursor: pointer;
+}
 
+#unsure{
+  margin-top: 1em;
+}
+
+/* .popupPrompt{
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.dates{
+  display: none;
+}
+
+.popupPrompt:hover + .dates{
+  display: block;
+  color: white;
+} */
