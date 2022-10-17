@@ -57,4 +57,3 @@ event.preventDefault()
 }
 
 button.addEventListener(`click`, getData)
-// back.addEventListener(`click`, history.back())
