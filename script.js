@@ -54,23 +54,11 @@ event.preventDefault()
 )
 }
 
-function autoFill() {
-  textInput.innerText = `${dropDownValue.value}`
-  console.log(textInput)
-}
-
-// dropDownValue.addEventListener(`click`, autoFill())
-
 button.addEventListener(`click`, getData)
 
-textInput.addEventListener(`keypress`, event => {
+textInput.addEventListener(`keypress`, (event) => {
   if (event.key === `Enter`) {
     event.preventDefault()
     button.click()
-    getData()
   }
 })
-
-
-
-
