@@ -1,5 +1,6 @@
 body{ 
   background-color: black;
+  cursor: url(assets/cursor.png), auto;
 }
 
 .content {
@@ -33,20 +34,6 @@ body{
   cursor: pointer;
 }
 
-#unsure{
+#dropDown{
   margin-top: 1em;
 }
-
-/* .popupPrompt{
-  cursor: pointer;
-  margin-top: 1em;
-}
-
-.dates{
-  display: none;
-}
-
-.popupPrompt:hover + .dates{
-  display: block;
-  color: white;
-} */

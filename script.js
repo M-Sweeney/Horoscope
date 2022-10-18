@@ -3,6 +3,10 @@ let image = document.querySelector(`#signImg`)
 let sign = document.querySelector(`#sign`)
 let date = document.querySelector(`#date`)
 let description = document.querySelector(`#description`)
+let dropDown = document.querySelector(`#dropDown`)
+let textInput = document.querySelector(`#inputBar`)
+let dropDownValue = document.querySelector(`#dropDownValue`)
+
 
 async function getData (event) {
   let textInput = document.querySelector(`#inputBar`).value.toLowerCase()
@@ -50,5 +54,23 @@ event.preventDefault()
 )
 }
 
+function autoFill() {
+  textInput.innerText = `${dropDownValue.value}`
+  console.log(textInput)
+}
+
+// dropDownValue.addEventListener(`click`, autoFill())
+
 button.addEventListener(`click`, getData)
+
+textInput.addEventListener(`keypress`, event => {
+  if (event.key === `Enter`) {
+    event.preventDefault()
+    button.click()
+    getData()
+  }
+})
+
+
+
 
