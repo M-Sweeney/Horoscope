@@ -5,48 +5,43 @@ let date = document.querySelector(`#date`)
 let description = document.querySelector(`#description`)
 let dropDown = document.querySelector(`#dropDown`)
 let textInput = document.querySelector(`#inputBar`)
-let dropDownValue = document.querySelector(`#dropDownValue`)
 
-
-async function getData (event) {
-  let textInput = document.querySelector(`#inputBar`).value.toLowerCase()
+async function getData(zodiacSign) {
+  zodiacSign = zodiacSign.toLowerCase()
 
 event.preventDefault()
 
-  fetch(`http://ohmanda.com/api/horoscope/${textInput}`)
+  fetch(`http://ohmanda.com/api/horoscope/${zodiacSign}`)
   .then(res => res.json())
   .then(res => {
-      sign.innerHTML = `${res.sign}`.toUpperCase()
-      
+      sign.innerHTML = `${res.sign}`.toUpperCase() 
       date.innerText = `Today: ${res.date}`
-
       description.innerText = `${res.horoscope}`
-    
-    if (textInput.toLowerCase() == `aquarius`) {
+    if (zodiacSign.toLowerCase() == `aquarius`) {
       image.src= `assets/aquarius.png`
-    }else if (textInput.toLowerCase() == `pisces`) {
+    }else if (zodiacSign.toLowerCase() == `pisces`) {
       image.src= `assets/pisces.png`
-    }else if (textInput.toLowerCase() == `aries`) {
+    }else if (zodiacSign.toLowerCase() == `aries`) {
       image.src= `assets/aries.png`
-    }else if (textInput.toLowerCase() == `taurus`) {
+    }else if (zodiacSign.toLowerCase() == `taurus`) {
       image.src= `assets/taurus.png`
-    }else if (textInput.toLowerCase() == `gemini`) {
+    }else if (zodiacSign.toLowerCase() == `gemini`) {
       image.src= `assets/gemini.png`
-    }else if (textInput.toLowerCase() == `cancer`) {
+    }else if (zodiacSign.toLowerCase() == `cancer`) {
       image.src= `assets/cancer.png`
-    }else if (textInput.toLowerCase() == `leo`) {
+    }else if (zodiacSign.toLowerCase() == `leo`) {
       image.src= `assets/leo.png`
-    }else if (textInput.toLowerCase() == `virgo`) {
+    }else if (zodiacSign.toLowerCase() == `virgo`) {
       image.src= `assets/virgo.png`
-    }else if (textInput.toLowerCase() == `libra`) {
+    }else if (zodiacSign.toLowerCase() == `libra`) {
       image.src= `assets/libra.png`
-    }else if (textInput.toLowerCase() == `scorpio`) {
+    }else if (zodiacSign.toLowerCase() == `scorpio`) {
       image.src= `assets/scorpio.png`
-    }else if (textInput.toLowerCase() == `sagittarius`) {
+    }else if (zodiacSign.toLowerCase() == `sagittarius`) {
       image.src= `assets/sag.png`
-    }else if(textInput.toLowerCase() == `capricorn`) {
+    }else if(zodiacSign.toLowerCase() == `capricorn`) {
       image.src= `assets/cap.png`
-    }else{image.src ==``}
+    }else{image.src == ``}
   })
   .catch( err =>{
     console.log(`Error!`, err)
@@ -54,7 +49,10 @@ event.preventDefault()
 )
 }
 
-button.addEventListener(`click`, getData)
+button.addEventListener(`click`, (event) => {
+  event.preventDefault()
+  getData(textInput.value)
+})
 
 textInput.addEventListener(`keypress`, (event) => {
   if (event.key === `Enter`) {
@@ -62,3 +60,12 @@ textInput.addEventListener(`keypress`, (event) => {
     button.click()
   }
 })
+
+dropDown.addEventListener(`change`, (event) => {
+  event.preventDefault()
+  textInput.value = ``
+  getData(dropDown.value)
+})
+
+
+
