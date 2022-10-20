@@ -5,6 +5,7 @@ let date = document.querySelector(`#date`)
 let description = document.querySelector(`#description`)
 let dropDown = document.querySelector(`#dropDown`)
 let textInput = document.querySelector(`#inputBar`)
+let stars = document.querySelector(`#stars`)
 
 async function getData(zodiacSign) {
   zodiacSign = zodiacSign.toLowerCase()
@@ -67,5 +68,8 @@ dropDown.addEventListener(`change`, (event) => {
   getData(dropDown.value)
 })
 
+//I used this website to figure out how to toggle my background image https://stackoverflow.com/questions/31565045/toggle-background-image-html
 
-
+stars.addEventListener('click',function() {
+  document.body.classList.toggle('starBackground');
+});
