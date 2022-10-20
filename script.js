@@ -11,7 +11,7 @@ async function getData(zodiacSign) {
 
 event.preventDefault()
 
-  fetch(`http://ohmanda.com/api/horoscope/${zodiacSign}`)
+  fetch(`https://ohmanda.com/api/horoscope/${zodiacSign}`)
   .then(res => res.json())
   .then(res => {
       sign.innerHTML = `${res.sign}`.toUpperCase() 
